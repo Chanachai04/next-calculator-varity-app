@@ -1,5 +1,6 @@
 "use client";
 import type { NextPage } from "next";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const CarInstallmentCalculatorUI: NextPage = () => {
@@ -20,11 +21,31 @@ const CarInstallmentCalculatorUI: NextPage = () => {
   };
 
   const handleCalCarInstallment = () => {
-    const downPayment = (parseInt(carPrice) * downPaymentPercent) / 100;
-    const loanAmount = parseInt(carPrice) - downPayment;
+    const parsedCarPrice = parseFloat(carPrice);
+    const parsedInterestRate = parseFloat(interestRate);
+
+    // Validate
+    if (isNaN(parsedCarPrice) || parsedCarPrice <= 0) {
+      alert("กรุณากรอกราคารถให้ถูกต้องและมากกว่า 0");
+      return;
+    }
+
+    if (isNaN(parsedInterestRate) || parsedInterestRate < 0) {
+      alert("กรุณากรอกอัตราดอกเบี้ยให้ถูกต้อง (>= 0)");
+      return;
+    }
+
+    if (loanTermMonths <= 0) {
+      alert("จำนวนเดือนผ่อนไม่สามารถเป็น 0 หรือค่าติดลบได้");
+      return;
+    }
+
+    // Calculate
+    const downPayment = (parsedCarPrice * downPaymentPercent) / 100;
+    const loanAmount = parsedCarPrice - downPayment;
     const loanTermYears = loanTermMonths / 12;
     const totalInterest =
-      loanAmount * (parseFloat(interestRate) / 100) * loanTermYears;
+      loanAmount * (parsedInterestRate / 100) * loanTermYears;
     const totalPayable = loanAmount + totalInterest;
     const monthly = totalPayable / loanTermMonths;
 
@@ -122,7 +143,7 @@ const CarInstallmentCalculatorUI: NextPage = () => {
             </select>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <div className="flex flex-col  gap-4 pt-2">
             <button
               type="button"
               onClick={handleCalCarInstallment}
@@ -137,6 +158,14 @@ const CarInstallmentCalculatorUI: NextPage = () => {
             >
               รีเซ็ท
             </button>
+            <Link href={"/"}>
+              <button
+                type="button"
+                className="w-full py-2 px-4 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 rounded-md"
+              >
+                ย้อนกลับ
+              </button>
+            </Link>
           </div>
         </form>
 

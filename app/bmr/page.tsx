@@ -1,6 +1,7 @@
 "use client";
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const BMRCalculatorUI: NextPage = () => {
@@ -154,7 +155,7 @@ const BMRCalculatorUI: NextPage = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <div className="flex flex-col  gap-4 pt-2">
             <button
               type="button"
               onClick={handleCalBMR}
@@ -169,6 +170,14 @@ const BMRCalculatorUI: NextPage = () => {
             >
               รีเซ็ท
             </button>
+            <Link href={"/"}>
+              <button
+                type="button"
+                className="w-full py-2 px-4 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 rounded-md"
+              >
+                ย้อนกลับ
+              </button>
+            </Link>
           </div>
         </form>
 
