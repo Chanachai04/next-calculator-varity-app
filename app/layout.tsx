@@ -8,8 +8,8 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "Calculator Varity 2025 by DTI-SAU",
-  description: "Calculator Varity 2025 by DTI-SAU",
+  title: "Calculator Varity",
+  description: "Calculator Varity",
   icons: {
     icon: "/calculator.png",
   },

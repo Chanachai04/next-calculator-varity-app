@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Calculator Varity
 
-## Getting Started
+**Calculator Varity** เป็นแอปพลิเคชันรวมเครื่องมือคำนวณที่จำเป็นในชีวิตประจำวัน พัฒนาโดยใช้เทคโนโลยีสมัยใหม่ เพื่อความรวดเร็ว แม่นยำ และรองรับการใช้งานทุกระดับหน้าจอ (Responsive Design)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. 🏥 BMI Calculator (คำนวณดัชนีมวลกาย)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ประเมินสภาวะร่างกายจากน้ำหนักและส่วนสูง
+- แสดงกลุ่มระดับความอ้วน/ผอม ตามมาตรฐานสากล
+- ดีไซน์ทันสมัย ใช้งานง่าย
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. 🔥 BMR Calculator (คำนวณอัตราการเผาผลาญ)
 
-## Learn More
+- คำนวณความต้องการพลังงานพื้นฐานของร่างกายต่อวัน
+- แยกการคำนวณตามเพศ (ชาย/หญิง) เพื่อความแม่นยำ
+- ช่วยในการวางแผนโภชนาการและการลดน้ำหนัก
 
-To learn more about Next.js, take a look at the following resources:
+### 3. 🚗 Car Installment Calculator (คำนวณค่างวดรถ)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- วางแผนการเงินสำหรับการซื้อรถยนต์
+- คำนวณค่างวดรายเดือนโดยอิงจากราคารถ, เงินดาวน์ (%), อัตราดอกเบี้ย, และระยะเวลาผ่อน
+- รายละเอียดสรุปยอดจัดไฟแนนซ์และเงินดาวน์ที่ชัดเจน
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework:** [Next.js 15+](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Font:** [Kanit](https://fonts.google.com/specimen/Kanit) (Google Fonts)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/next-dti-fourth-app.git
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 🎨 UI Design Philosophy
+
+แอปพลิเคชันใช้ธีมสี **ฟ้า-ขาว (Blue & White)** เป็นหลัก เพื่อความรู้สึกสะอาดตา ทันสมัย (Modern Style) และเป็นมืออาชีพ มีการใช้ Soft Shadows, Gradients และ Micro-animations เพื่อเพิ่มประสบการณ์การใช้งานที่พรีเมียม
+
+---
